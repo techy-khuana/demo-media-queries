@@ -1,0 +1,38 @@
+/* This is the generic CSS - it's at the top of the page (not in a media query) and it applies to all screen widths */
+
+/* We will develop and design "Mobile First" */
+
+div {
+    padding: 3rem
+}
+
+div:first-of-type {
+    background-color: aquamarine;
+}
+
+div:nth-of-type(2) {
+    background-color: chocolate;
+}
+
+div:last-of-type {
+    background-color: cornflowerblue;
+}
+
+/* media queries come after the generic css and will make changes if that condition is met. */
+/* Use min-width as a condition, then the css will apply at that width and beyond  */
+/* CSS Cascading: This means if two equal selectors have different property values, last rule wins e.g the div:first-of-type rule at the top and the other inside the media query. Remember that the property value inside the media query isn't read until the screen size gets to 750px or wider.*/
+@media screen and (min-width: 750px) {
+    div:first-of-type {
+        background-color: pink;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    div:first-of-type {
+        background-color: darkolivegreen;
+    }
+
+    div:nth-of-type(2) {
+        background-color: darkorchid;
+    }
+}
